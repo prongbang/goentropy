@@ -7,7 +7,7 @@
 ## Install
 
 ```shell
-go install github.com/prongbang/goentropy
+go get github.com/prongbang/goentropy
 ```
 
 ## Used
