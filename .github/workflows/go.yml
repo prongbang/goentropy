@@ -19,19 +19,11 @@ jobs:
     - name: Get dependencies
       run: |
         go get -v -t -d ./...
-        if [ -f Gopkg.toml ]; then
-            curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
-            dep ensure
-        fi
 
-    - name: Test
-      run: go test -cover ./...
-
-    - name: Build
-      run: go build -v .
-
-    - name: Run coverage
-      run: go test -race -coverprofile=coverage.txt -covermode=atomic
+    - name: Test coverage
+      run: go test -cover ./... -coverprofile=cover.out
 
     - name: Upload coverage to Codecov
-      run: bash <(curl -s https://codecov.io/bash)
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }} # get from https://github.com/prongbang/goentropy/settings/secrets/actions
