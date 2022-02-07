@@ -15,7 +15,7 @@ func init() {
 
 func TestEntropy(t *testing.T) {
 	r := e.Calc("123456")
-	if r > 2.5 {
+	if r < 2.5 {
 		t.Errorf("Expected 2.5, got %f", r)
 	}
 }
