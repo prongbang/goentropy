@@ -1,4 +1,4 @@
-# GO Entropy
+# Go Entropy
 
 [![Build Status](https://github.com/prongbang/goentropy/workflows/Go/badge.svg)](https://github.com/prongbang/goentropy/actions)
 [![Codecov](https://img.shields.io/codecov/c/github/prongbang/goentropy.svg)](https://codecov.io/gh/prongbang/goentropy) 
